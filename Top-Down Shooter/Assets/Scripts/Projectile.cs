@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
 
     public LayerMask collisionMask;
     public float speed = 10;
+    float damage = 1;
 
     public void setSpeed(float newSpeed)
     {
@@ -23,17 +24,21 @@ public class Projectile : MonoBehaviour
     void CheckCollisions(float moveDistance)
     {
         Ray ray = new Ray(transform.position, transform.forward);
-        RaycastHit hitInfo;
+        RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hitInfo, moveDistance, collisionMask, QueryTriggerInteraction.Collide))
+        if (Physics.Raycast(ray, out hit, moveDistance, collisionMask, QueryTriggerInteraction.Collide))
         {
-            OnHitObject(hitInfo);
+            OnHitObject(hit);
         }
     }
 
     void OnHitObject(RaycastHit hit)
     {
-        print(hit.collider.gameObject.name);
+        IDamagable damagableObject = hit.collider.GetComponent<IDamagable>();
+        if (damagableObject != null)
+        {
+            damagableObject.TakeHit(damage, hit);
+        }
         GameObject.Destroy(gameObject);
     }
 }
