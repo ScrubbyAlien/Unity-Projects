@@ -108,8 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   muzzleExitPoint: {fileID: 7687536742910449002}
   bullet: {fileID: 180826681645942721, guid: f7335d0fc55569a4aa0ad3f93c64fff7, type: 3}
-  msBetweenShots: 500
-  exitVelocity: 35
+  msBetweenShots: 350
+  exitVelocity: 27
 --- !u!1001 &5163874747712727312
 PrefabInstance:
   m_ObjectHideFlags: 0
