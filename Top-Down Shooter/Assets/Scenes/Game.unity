@@ -150,10 +150,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemyCount: 3
-    timeBetweenSpawn: 3
-  - enemyCount: 6
-    timeBetweenSpawn: 2
+  - enemyCount: 1
+    timeBetweenSpawn: 0
+  - enemyCount: 10
+    timeBetweenSpawn: 1
+  - enemyCount: 14
+    timeBetweenSpawn: 0.9
   enemy: {fileID: 8458488248658743081, guid: 8c81631f33ccab44393b17a0203f99f0, type: 3}
 --- !u!4 &45741506
 Transform:
@@ -656,7 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac80e59af4038e459e7b23b3ccd489b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 10
+  startingHealth: 5
   moveSpeed: 6
 --- !u!114 &1809997245
 MonoBehaviour:
@@ -754,7 +756,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809997243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11878681, y: 1, z: -0.07}
+  m_LocalPosition: {x: -3.06, y: 1, z: 2.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1661263422}
