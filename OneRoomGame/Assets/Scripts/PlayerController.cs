@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public Camera cam;
     public UnityEngine.AI.NavMeshAgent agent;
+    public LayerMask groundLayer;
 
     public float runSpeed;
     public float walkSpeed;
@@ -47,7 +48,7 @@ public class PlayerController : MonoBehaviour
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, 1000f, groundLayer))
             {
                 agent.speed = walkSpeed;
 
